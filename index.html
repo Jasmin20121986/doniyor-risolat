@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doniyor &amp; Risolat — 12.12.2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070604;
+      --gold: #d6b05c;
+      --gold-bright: #f5df9e;
+      --gold-dark: #9c7224;
+      --gold-line: rgba(214, 176, 92, 0.36);
+      --text-soft: #f2e4c2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-soft);
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    #particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Тил алмаштиргич (UZ / RU / TJ) */
+    .lang-switch {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 30;
+      display: flex;
+      gap: 3px;
+      background: rgba(13, 11, 7, 0.88);
+      border: 1px solid var(--gold-line);
+      border-radius: 999px;
+      padding: 4px;
+      backdrop-filter: blur(8px);
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--gold-bright);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 6px 13px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .lang-btn.active {
+      background: linear-gradient(135deg, #f3d78e, #b58835);
+      color: #140f07;
+      font-weight: 600;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 20px 16px 110px;
+    }
+
+    .section-space {
+      margin-top: 64px;
+    }
+
+    .small-cap {
+      font-size: 11px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 14px auto 22px;
+      max-width: 220px;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold));
+    }
+
+    .divider::after {
+      background: linear-gradient(to left, transparent, var(--gold));
+    }
+
+    .divider-gem {
+      color: var(--gold-bright);
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-align: center;
+      color: var(--gold-bright);
+      margin-bottom: 30px;
+    }
+
+    /* 1. Бош экран */
+    .hero-frame {
+      position: relative;
+      border: 1px solid var(--gold-line);
+      border-radius: 225px 225px 16px 16px;
+      padding: 10px 10px 50px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 16%, rgba(214, 176, 92, 0.14), rgba(7, 6, 4, 0.92) 65%);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.85);
+    }
+
+    .hero-frame::before {
+      content: "";
+      position: absolute;
+      inset: 7px;
+      border: 1px solid rgba(214, 176, 92, 0.22);
+      border-radius: 218px 218px 12px 12px;
+      pointer-events: none;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+      width: 100%;
+      height: 310px;
+      border-radius: 210px 210px 0 0;
+      overflow: hidden;
+      margin-bottom: 16px;
+      background: radial-gradient(circle at 50% 35%, rgba(214, 176, 92, 0.2), rgba(16, 12, 7, 0.95));
+    }
+
+    .hero-image-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 65%, var(--bg) 98%);
+      pointer-events: none;
+    }
+
+    .couple-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 12%;
+      display: block;
+    }
+
+    .hero-fallback-art {
+      width: 100%;
+      height: 100%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px;
+      background: radial-gradient(circle at 50% 40%, rgba(245, 223, 158, 0.16), rgba(12, 9, 5, 0.96));
+    }
+
+    .hero-fallback-art.show {
+      display: flex;
+    }
+
+    .rings-svg {
+      width: 88px;
+      height: 68px;
+      margin: 0 auto 12px;
+      display: block;
+      filter: drop-shadow(0 0 14px rgba(214, 176, 92, 0.35));
+    }
+
+    .hero-subtitle {
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 14px;
+    }
+
+    .hero-names {
+      font-family: 'Great Vibes', cursive;
+      font-size: 56px;
+      line-height: 1.06;
+      font-weight: 400;
+      background: linear-gradient(180deg, #fff0c2 0%, #cf9f42 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 22px;
+    }
+
+    .hero-names span {
+      display: block;
+    }
+
+    .hero-date {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--gold-bright);
+      margin-bottom: 10px;
+    }
+
+    .diamond {
+      width: 7px;
+      height: 7px;
+      background: var(--gold);
+      transform: rotate(45deg);
+      display: inline-block;
+    }
+
+    .hero-place {
+      font-size: 11px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .scroll-box {
+      text-align: center;
+      margin: 34px 0 10px;
+    }
+
+    .scroll-box p {
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .scroll-bar {
+      width: 1px;
+      height: 36px;
+      margin: 0 auto;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2s infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.35; transform: scaleY(0.8); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+
+    /* Нақшли рамка карточкаси */
+    .ornate-card {
+      position: relative;
+      border: 1px solid var(--gold-line);
+      padding: 36px 20px;
+      text-align: center;
+      background: rgba(14, 11, 7, 0.72);
+    }
+
+    .corner-ornament {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border-color: var(--gold);
+      border-style: solid;
+      pointer-events: none;
+    }
+
+    .corner-ornament::after {
+      content: "◇";
+      position: absolute;
+      font-size: 10px;
+      color: var(--gold-bright);
+    }
+
+    .co-tl { top: 6px; left: 6px; border-width: 1.5px 0 0 1.5px; }
+    .co-tl::after { top: 4px; left: 5px; }
+    .co-tr { top: 6px; right: 6px; border-width: 1.5px 1.5px 0 0; }
+    .co-tr::after { top: 4px; right: 5px; }
+    .co-bl { bottom: 6px; left: 6px; border-width: 0 0 1.5px 1.5px; }
+    .co-bl::after { bottom: 4px; left: 5px; }
+    .co-br { bottom: 6px; right: 6px; border-width: 0 1.5px 1.5px 0; }
+    .co-br::after { bottom: 4px; right: 5px; }
+
+    .letter-para {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 21px;
+      line-height: 1.55;
+      color: var(--text-soft);
+      margin-bottom: 18px;
+    }
+
+    .love-line {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 22px;
+      color: var(--gold-bright);
+      margin-top: 8px;
+    }
+
+    .letter-names {
+      font-family: 'Great Vibes', cursive;
+      font-size: 46px;
+      line-height: 1.1;
+      background: linear-gradient(180deg, #fff0c2 0%, #cf9f42 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 6px 0 14px;
+    }
+
+    .families-line {
+      font-size: 11px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      line-height: 1.6;
+    }
+
+    /* Таймер ва Календар */
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin: 22px 0 24px;
+    }
+
+    .cd-box {
+      border: 1px solid var(--gold-line);
+      background: rgba(18, 14, 9, 0.85);
+      padding: 14px 4px 12px;
+      text-align: center;
+    }
+
+    .cd-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--gold-bright);
+      letter-spacing: 0.06em;
+      display: block;
+    }
+
+    .cd-label {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 4px;
+      display: block;
+    }
+
+    .btn-gold-solid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px 18px;
+      border-radius: 6px;
+      border: none;
+      background: linear-gradient(180deg, #f3d78c 0%, #c8983b 100%);
+      color: #140f07;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 6px 24px rgba(214, 176, 92, 0.22);
+      transition: 0.2s;
+    }
+
+    .btn-gold-solid:active {
+      transform: scale(0.99);
+    }
+
+    .btn-gold-outline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px 18px;
+      margin-top: 12px;
+      border-radius: 6px;
+      border: 1px solid var(--gold-line);
+      background: rgba(14, 11, 7, 0.8);
+      color: var(--gold-bright);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .copy-link-btn {
+      display: inline-block;
+      margin-top: 16px;
+      background: none;
+      border: none;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 4px;
+      color: var(--gold-bright);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    /* Кун тартиби */
+    .timeline {
+      position: relative;
+      padding-left: 34px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 10px;
+      bottom: 24px;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--gold), rgba(214, 176, 92, 0.2));
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 34px;
+    }
+
+    .tl-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .tl-marker {
+      position: absolute;
+      left: -34px;
+      top: 4px;
+      width: 17px;
+      height: 17px;
+      border: 1px solid var(--gold);
+      background: var(--bg);
+      transform: rotate(45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tl-marker::after {
+      content: "";
+      width: 5px;
+      height: 5px;
+      background: var(--gold-bright);
+    }
+
+    .tl-time {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      color: var(--gold-bright);
+      line-height: 1.1;
+    }
+
+    .tl-icon {
+      width: 24px;
+      height: 24px;
+      margin: 10px 0 8px;
+      color: var(--gold);
+    }
+
+    .tl-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--gold-bright);
+      margin-bottom: 4px;
+    }
+
+    .tl-desc {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      line-height: 1.4;
+      color: rgba(242, 228, 194, 0.85);
+    }
+
+    /* Тўйхона манзили */
+    .venue-wrap {
+      text-align: center;
+    }
+
+    .venue-ill {
+      width: 240px;
+      height: 175px;
+      margin: 0 auto 24px;
+      display: block;
+      filter: drop-shadow(0 0 18px rgba(214, 176, 92, 0.22));
+    }
+
+    .venue-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+      margin: 10px 0 4px;
+    }
+
+    .venue-type {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 22px;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .venue-addr {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      color: var(--text-soft);
+      margin-bottom: 10px;
+    }
+
+    .venue-note {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: rgba(242, 228, 194, 0.78);
+      margin-bottom: 24px;
+    }
+
+    /* Dress-code */
+    .dress-code-tag {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-align: center;
+      color: var(--gold-bright);
+      margin-bottom: 12px;
+    }
+
+    .dress-note {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 20px;
+      text-align: center;
+      color: var(--text-soft);
+      line-height: 1.45;
+      margin-bottom: 28px;
+    }
+
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px 12px;
+      text-align: center;
+    }
+
+    .swatch-circle {
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      border: 1px solid rgba(255, 232, 173, 0.22);
+      box-shadow: inset -6px -6px 14px rgba(0, 0, 0, 0.65), inset 5px 5px 12px rgba(255, 255, 255, 0.16), 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .swatch-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* Фото хештег ва лавҳалар */
+    .photo-box {
+      text-align: center;
+    }
+
+    .photo-diamond {
+      width: 68px;
+      height: 68px;
+      border: 1px solid var(--gold-line);
+      background: rgba(18, 14, 9, 0.85);
+      transform: rotate(45deg);
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-diamond svg {
+      transform: rotate(-45deg);
+      width: 26px;
+      height: 26px;
+      color: var(--gold-bright);
+    }
+
+    .hashtag-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 18px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      border: 1px solid var(--gold-line);
+      background: rgba(16, 13, 8, 0.85);
+      color: var(--gold-bright);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .moments-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .moment-card {
+      border: 1px solid var(--gold-line);
+      border-radius: 10px;
+      padding: 16px 12px;
+      background: rgba(16, 12, 8, 0.82);
+      text-align: center;
+    }
+
+    .moment-card svg {
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 8px;
+      display: block;
+    }
+
+    .moment-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      color: var(--gold-bright);
+      margin-bottom: 2px;
+    }
+
+    .moment-sub {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* RSVP форма */
+    .rsvp-field {
+      text-align: left;
+      margin-bottom: 18px;
+    }
+
+    .rsvp-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .rsvp-input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 6px;
+      border: 1px solid var(--gold-line);
+      background: rgba(9, 7, 4, 0.9);
+      color: var(--gold-bright);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 20px;
+      outline: none;
+    }
+
+    .rsvp-input:focus {
+      border-color: var(--gold-bright);
+    }
+
+    .choice-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .choice-btn {
+      padding: 14px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--gold-line);
+      background: rgba(12, 9, 6, 0.85);
+      color: var(--gold);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .choice-btn.active {
+      background: linear-gradient(180deg, #f3d78c 0%, #c8983b 100%);
+      color: #140f07;
+      font-weight: 600;
+      border-color: transparent;
+    }
+
+    .counter-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid var(--gold-line);
+      border-radius: 6px;
+      background: rgba(9, 7, 4, 0.9);
+      padding: 10px 18px;
+    }
+
+    .cnt-btn {
+      background: none;
+      border: none;
+      color: var(--gold);
+      font-size: 22px;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+    }
+
+    .cnt-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      color: var(--gold-bright);
+    }
+
+    /* Якуний қисм */
+    .footer-end {
+      text-align: center;
+      margin-top: 68px;
+    }
+
+    .monogram-coin {
+      width: 126px;
+      height: 126px;
+      border-radius: 50%;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 35% 30%, #f9e6ad 0%, #cfa043 58%, #8f651b 100%);
+      box-shadow: 0 0 32px rgba(214, 176, 92, 0.28), inset 0 0 0 5px rgba(255, 245, 204, 0.25);
+    }
+
+    .monogram-coin span {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 32px;
+      font-weight: 500;
+      color: #191208;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-names {
+      font-family: 'Great Vibes', cursive;
+      font-size: 46px;
+      background: linear-gradient(180deg, #fff0c2 0%, #cf9f42 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 14px;
+    }
+
+    .footer-credit {
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: rgba(214, 176, 92, 0.65);
+    }
+
+    /* Хабарнома */
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 84px;
+      transform: translateX(-50%);
+      z-index: 40;
+      background: rgba(22, 18, 11, 0.95);
+      border: 1px solid var(--gold);
+      color: var(--gold-bright);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 12px;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.25s;
+      white-space: nowrap;
+    }
+
+    .toast.show {
+      opacity: 1;
+    }
+
+    /* Салют тугмаси (чап пастда) */
+    .sparkle-btn {
+      position: fixed;
+      bottom: 18px;
+      left: 18px;
+      z-index: 30;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(14, 11, 7, 0.92);
+      border: 1px solid var(--gold);
+      color: var(--gold-bright);
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 0 18px rgba(214, 176, 92, 0.25);
+    }
+
+    /* Мусиқа тугмаси */
+    .music-btn
