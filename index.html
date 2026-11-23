@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="uz">
 <head>
   <meta charset="UTF-8" />
@@ -42,7 +42,6 @@
       z-index: 0;
     }
 
-    /* Тил алмаштиргич (UZ / RU / TJ) */
     .lang-switch {
       position: fixed;
       top: 16px;
@@ -134,7 +133,6 @@
       margin-bottom: 30px;
     }
 
-    /* 1. Бош экран */
     .hero-frame {
       position: relative;
       border: 1px solid var(--gold-line);
@@ -194,14 +192,6 @@
 
     .hero-fallback-art.show {
       display: flex;
-    }
-
-    .rings-svg {
-      width: 88px;
-      height: 68px;
-      margin: 0 auto 12px;
-      display: block;
-      filter: drop-shadow(0 0 14px rgba(214, 176, 92, 0.35));
     }
 
     .hero-subtitle {
@@ -281,7 +271,6 @@
       50% { opacity: 1; transform: scaleY(1); }
     }
 
-    /* Нақшли рамка карточкаси */
     .ornate-card {
       position: relative;
       border: 1px solid var(--gold-line);
@@ -349,7 +338,6 @@
       line-height: 1.6;
     }
 
-    /* Таймер ва Календар */
     .countdown-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -445,7 +433,6 @@
       cursor: pointer;
     }
 
-    /* Кун тартиби */
     .timeline {
       position: relative;
       padding-left: 34px;
@@ -500,19 +487,12 @@
       line-height: 1.1;
     }
 
-    .tl-icon {
-      width: 24px;
-      height: 24px;
-      margin: 10px 0 8px;
-      color: var(--gold);
-    }
-
     .tl-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 26px;
       font-weight: 500;
       color: var(--gold-bright);
-      margin-bottom: 4px;
+      margin: 8px 0 4px;
     }
 
     .tl-desc {
@@ -522,17 +502,8 @@
       color: rgba(242, 228, 194, 0.85);
     }
 
-    /* Тўйхона манзили */
     .venue-wrap {
       text-align: center;
-    }
-
-    .venue-ill {
-      width: 240px;
-      height: 175px;
-      margin: 0 auto 24px;
-      display: block;
-      filter: drop-shadow(0 0 18px rgba(214, 176, 92, 0.22));
     }
 
     .venue-name {
@@ -566,7 +537,6 @@
       margin-bottom: 24px;
     }
 
-    /* Dress-code */
     .dress-code-tag {
       font-family: 'Cormorant Garamond', serif;
       font-size: 30px;
@@ -610,28 +580,8 @@
       color: var(--gold);
     }
 
-    /* Фото хештег ва лавҳалар */
     .photo-box {
       text-align: center;
-    }
-
-    .photo-diamond {
-      width: 68px;
-      height: 68px;
-      border: 1px solid var(--gold-line);
-      background: rgba(18, 14, 9, 0.85);
-      transform: rotate(45deg);
-      margin: 0 auto 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .photo-diamond svg {
-      transform: rotate(-45deg);
-      width: 26px;
-      height: 26px;
-      color: var(--gold-bright);
     }
 
     .hashtag-pill {
@@ -650,43 +600,6 @@
       cursor: pointer;
     }
 
-    .moments-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .moment-card {
-      border: 1px solid var(--gold-line);
-      border-radius: 10px;
-      padding: 16px 12px;
-      background: rgba(16, 12, 8, 0.82);
-      text-align: center;
-    }
-
-    .moment-card svg {
-      width: 44px;
-      height: 44px;
-      margin: 0 auto 8px;
-      display: block;
-    }
-
-    .moment-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 19px;
-      color: var(--gold-bright);
-      margin-bottom: 2px;
-    }
-
-    .moment-sub {
-      font-size: 10px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    /* RSVP форма */
     .rsvp-field {
       text-align: left;
       margin-bottom: 18px;
@@ -771,7 +684,6 @@
       color: var(--gold-bright);
     }
 
-    /* Якуний қисм */
     .footer-end {
       text-align: center;
       margin-top: 68px;
@@ -807,14 +719,6 @@
       margin-bottom: 14px;
     }
 
-    .footer-credit {
-      font-size: 10px;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      color: rgba(214, 176, 92, 0.65);
-    }
-
-    /* Хабарнома */
     .toast {
       position: fixed;
       left: 50%;
@@ -837,7 +741,6 @@
       opacity: 1;
     }
 
-    /* Салют тугмаси (чап пастда) */
     .sparkle-btn {
       position: fixed;
       bottom: 18px;
@@ -857,5 +760,627 @@
       box-shadow: 0 0 18px rgba(214, 176, 92, 0.25);
     }
 
-    /* Мусиқа тугмаси */
-    .music-btn
+    .music-btn {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      z-index: 30;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(14, 11, 7, 0.92);
+      border: 1px solid var(--gold);
+      color: var(--gold-bright);
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 0 18px rgba(214, 176, 92, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <div class="lang-switch">
+    <button type="button" class="lang-btn active" data-lang="uz">UZ</button>
+    <button type="button" class="lang-btn" data-lang="ru">RU</button>
+    <button type="button" class="lang-btn" data-lang="tj">TJ</button>
+  </div>
+
+  <main class="page">
+    <section class="hero-frame">
+      <div class="hero-image-wrap">
+        <img
+          src="file_000000003d0c82108ed6ff7c12d26f27.png"
+          alt="Doniyor & Risolat"
+          class="couple-img"
+          onerror="this.style.display='none'; document.getElementById('heroFallback').classList.add('show');"
+        />
+        <div id="heroFallback" class="hero-fallback-art">
+          <div style="font-family: 'Great Vibes', cursive; font-size: 38px; color: #f5df9e;">D &amp; R</div>
+          <div style="font-size: 11px; letter-spacing: 0.24em; color: #d6b05c;">12.12.2026</div>
+        </div>
+      </div>
+
+      <p class="hero-subtitle" data-i18n="heroSub">Тўй тантанасига таклифнома</p>
+      <h1 class="hero-names">
+        <span>Doniyor</span>
+        <span style="font-size: 36px; opacity: 0.85;">&amp;</span>
+        <span>Risolat</span>
+      </h1>
+
+      <div class="hero-date">
+        <span>12</span>
+        <span class="diamond"></span>
+        <span>12</span>
+        <span class="diamond"></span>
+        <span>2026</span>
+      </div>
+      <p class="hero-place" data-i18n="heroPlace">Шанба • Тўй базми</p>
+    </section>
+
+    <div class="scroll-box">
+      <p data-i18n="scrollText">Пастга тушинг</p>
+      <div class="scroll-bar"></div>
+    </div>
+
+    <section class="section-space ornate-card">
+      <span class="corner-ornament co-tl"></span>
+      <span class="corner-ornament co-tr"></span>
+      <span class="corner-ornament co-bl"></span>
+      <span class="corner-ornament co-br"></span>
+
+      <p class="small-cap" data-i18n="letterCap">Қадрли меҳмон</p>
+      <div class="divider"><span class="divider-gem">✦</span></div>
+
+      <p class="letter-para" data-i18n="letterP1">
+        Ҳаётимизнинг энг қувончли ва унутилмас кунида сизни ёнимизда кўриш биз учун катта бахт ва шарафдир.
+      </p>
+      <p class="letter-para" data-i18n="letterP2">
+        Севги, дуо ва эзгу тилаклар билан бошланаётган янги оилавий ҳаётимизга сизни чин қалбдан таклиф этамиз.
+      </p>
+      <p class="love-line" data-i18n="loveLine">Сизнинг иштирокингиз байрамимизга файз бағишлайди!</p>
+
+      <div class="letter-names">Doniyor &amp; Risolat</div>
+      <p class="families-line" data-i18n="familiesLine">Оилаларимиз номидан самимий эҳтиром билан</p>
+    </section>
+
+    <section class="section-space ornate-card">
+      <span class="corner-ornament co-tl"></span>
+      <span class="corner-ornament co-tr"></span>
+      <span class="corner-ornament co-bl"></span>
+      <span class="corner-ornament co-br"></span>
+
+      <p class="small-cap" data-i18n="cdCap">Бахт кунигача қолди</p>
+      <h2 class="section-title" style="font-size: 28px; margin-bottom: 12px;" data-i18n="cdTitle">12 Декабр 2026</h2>
+
+      <div class="countdown-grid">
+        <div class="cd-box">
+          <span class="cd-num" id="cdDays">00</span>
+          <span class="cd-label" data-i18n="days">Кун</span>
+        </div>
+        <div class="cd-box">
+          <span class="cd-num" id="cdHours">00</span>
+          <span class="cd-label" data-i18n="hours">Соат</span>
+        </div>
+        <div class="cd-box">
+          <span class="cd-num" id="cdMins">00</span>
+          <span class="cd-label" data-i18n="mins">Дақиқа</span>
+        </div>
+        <div class="cd-box">
+          <span class="cd-num" id="cdSecs">00</span>
+          <span class="cd-label" data-i18n="secs">Сония</span>
+        </div>
+      </div>
+
+      <button type="button" class="btn-gold-solid" id="addCalBtn" data-i18n="calBtn">
+        Тақвимга қўшиш
+      </button>
+      <button type="button" class="copy-link-btn" id="copyPageBtn" data-i18n="copyLink">
+        Таклифнома ҳаволасини нусхалаш
+      </button>
+    </section>
+
+    <section class="section-space">
+      <p class="small-cap" data-i18n="planCap">Тантана дастури</p>
+      <h2 class="section-title" data-i18n="planTitle">Кун тартиби</h2>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="tl-marker"></span>
+          <div class="tl-time">17:00</div>
+          <div class="tl-title" data-i18n="tl1Title">Меҳмонларни кутиб олиш</div>
+          <p class="tl-desc" data-i18n="tl1Desc">Майин мусиқа, илиқ табассум ва фотосуратлар</p>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-marker"></span>
+          <div class="tl-time">18:30</div>
+          <div class="tl-title" data-i18n="tl2Title">Тўй тантанасининг бошланиши</div>
+          <p class="tl-desc" data-i18n="tl2Desc">Келин-куёв тантанаси ва самимий табриклар</p>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-marker"></span>
+          <div class="tl-time">20:00</div>
+          <div class="tl-title" data-i18n="tl3Title">Байрам дастурхони ва рақслар</div>
+          <p class="tl-desc" data-i18n="tl3Desc">Мазали таомлар, куй-қўшиқ ва қувончли лаҳзалар</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space venue-wrap">
+      <p class="small-cap" data-i18n="venueCap">Байрам манзили</p>
+      <h2 class="section-title" data-i18n="venueTitle">Тўйхона</h2>
+
+      <div class="venue-name" data-i18n="venueName">Тантана саройи</div>
+      <div class="venue-type" data-i18n="venueType">Шоҳона банкет зали</div>
+      <p class="venue-addr" data-i18n="venueAddr">Байрам кўчаси, 12-уй</p>
+      <p class="venue-note" data-i18n="venueNote">Манзил харитасини очиб, қулай йўналишни танланг</p>
+
+      <a
+        href="https://maps.google.com/?q=Wedding+Hall"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-gold-solid"
+        data-i18n="mapBtn"
+      >
+        Харитада очиш
+      </a>
+    </section>
+
+    <section class="section-space">
+      <p class="small-cap" data-i18n="dressCap">Услуб ва ранглар</p>
+      <h2 class="section-title" data-i18n="dressTitle">Dress-code</h2>
+
+      <div class="dress-code-tag">Black &amp; Gold</div>
+      <p class="dress-note" data-i18n="dressNote">
+        Кечамизнинг файзига ҳамоҳанг классик ва нафис либосларда ташриф буюришингиздан хурсанд бўламиз.
+      </p>
+
+      <div class="palette-grid">
+        <div>
+          <div class="swatch-circle" style="background: #14120f;"></div>
+          <div class="swatch-label">Black</div>
+        </div>
+        <div>
+          <div class="swatch-circle" style="background: #d6b05c;"></div>
+          <div class="swatch-label">Gold</div>
+        </div>
+        <div>
+          <div class="swatch-circle" style="background: #f2e4c2;"></div>
+          <div class="swatch-label">Champagne</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space photo-box">
+      <p class="small-cap" data-i18n="photoCap">Эсдалик учун</p>
+      <h2 class="section-title" data-i18n="photoTitle">Хештег</h2>
+
+      <p class="dress-note" style="margin-bottom: 6px;" data-i18n="photoDesc">
+        Олган сурат ва видеоларингизни ушбу хештег билан бўлишинг:
+      </p>
+
+      <button type="button" class="hashtag-pill" id="copyHashBtn">
+        <span>#DoniyorRisolat2026</span>
+        <span style="font-size: 12px; color: var(--gold);" data-i18n="copyShort">Нусхалаш</span>
+      </button>
+    </section>
+
+    <section class="section-space ornate-card">
+      <span class="corner-ornament co-tl"></span>
+      <span class="corner-ornament co-tr"></span>
+      <span class="corner-ornament co-bl"></span>
+      <span class="corner-ornament co-br"></span>
+
+      <p class="small-cap" data-i18n="rsvpCap">Ташрифни тасдиқлаш</p>
+      <h2 class="section-title" style="font-size: 28px; margin-bottom: 18px;">RSVP</h2>
+
+      <form id="rsvpForm">
+        <div class="rsvp-field">
+          <label class="rsvp-label" for="guestName" data-i18n="nameLabel">Исм-шарифингиз</label>
+          <input id="guestName" type="text" class="rsvp-input" placeholder="Masalan: Azizbek Karimov" required />
+        </div>
+
+        <div class="rsvp-field">
+          <span class="rsvp-label" data-i18n="attendLabel">Ташриф буюрасизми?</span>
+          <div class="choice-row">
+            <button type="button" class="choice-btn active" id="attendYes" data-i18n="yesBtn">Албатта келаман</button>
+            <button type="button" class="choice-btn" id="attendNo" data-i18n="noBtn">Афсус, келолмайман</button>
+          </div>
+        </div>
+
+        <div class="rsvp-field">
+          <span class="rsvp-label" data-i18n="guestsLabel">Меҳмонлар сони</span>
+          <div class="counter-box">
+            <button type="button" class="cnt-btn" id="minusBtn">−</button>
+            <span class="cnt-val" id="guestCount">2</span>
+            <button type="button" class="cnt-btn" id="plusBtn">+</button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-gold-solid" data-i18n="sendBtn">Жавобни юбориш</button>
+      </form>
+    </section>
+
+    <footer class="footer-end">
+      <div class="monogram-coin"><span>D &amp; R</span></div>
+      <div class="footer-names">Doniyor &amp; Risolat</div>
+      <p class="small-cap" style="font-size: 10px; letter-spacing: 0.25em;">12.12.2026</p>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <button type="button" class="sparkle-btn" id="sparkleBtn" title="Sparkle">✦</button>
+  <button type="button" class="music-btn" id="musicBtn" title="Music">♪</button>
+
+  <script>
+    const translations = {
+      uz: {
+        heroSub: "Тўй тантанасига таклифнома",
+        heroPlace: "Шанба • Тўй базми",
+        scrollText: "Пастга тушинг",
+        letterCap: "Қадрли меҳмон",
+        letterP1: "Ҳаётимизнинг энг қувончли ва унутилмас кунида сизни ёнимизда кўриш биз учун катта бахт ва шарафдир.",
+        letterP2: "Севги, дуо ва эзгу тилаклар билан бошланаётган янги оилавий ҳаётимизга сизни чин қалбдан таклиф этамиз.",
+        loveLine: "Сизнинг иштирокингиз байрамимизга файз бағишлайди!",
+        familiesLine: "Оилаларимиз номидан самимий эҳтиром билан",
+        cdCap: "Бахт кунигача қолди",
+        cdTitle: "12 Декабр 2026",
+        days: "Кун",
+        hours: "Соат",
+        mins: "Дақиқа",
+        secs: "Сония",
+        calBtn: "Тақвимга қўшиш",
+        copyLink: "Таклифнома ҳаволасини нусхалаш",
+        planCap: "Тантана дастури",
+        planTitle: "Кун тартиби",
+        tl1Title: "Меҳмонларни кутиб олиш",
+        tl1Desc: "Майин мусиқа, илиқ табассум ва фотосуратлар",
+        tl2Title: "Тўй тантанасининг бошланиши",
+        tl2Desc: "Келин-куёв тантанаси ва самимий табриклар",
+        tl3Title: "Байрам дастурхони ва рақслар",
+        tl3Desc: "Мазали таомлар, куй-қўшиқ ва қувончли лаҳзалар",
+        venueCap: "Байрам манзили",
+        venueTitle: "Тўйхона",
+        venueName: "Тантана саройи",
+        venueType: "Шоҳона банкет зали",
+        venueAddr: "Байрам кўчаси, 12-уй",
+        venueNote: "Манзил харитасини очиб, қулай йўналишни танланг",
+        mapBtn: "Харитада очиш",
+        dressCap: "Услуб ва ранглар",
+        dressNote: "Кечамизнинг файзига ҳамоҳанг классик ва нафис либосларда ташриф буюришингиздан хурсанд бўламиз.",
+        photoCap: "Эсдалик учун",
+        photoTitle: "Хештег",
+        photoDesc: "Олган сурат ва видеоларингизни ушбу хештег билан бўлишинг:",
+        copyShort: "Нусхалаш",
+        rsvpCap: "Ташрифни тасдиқлаш",
+        nameLabel: "Исм-шарифингиз",
+        attendLabel: "Ташриф буюрасизми?",
+        yesBtn: "Албатта келаман",
+        noBtn: "Афсус, келолмайман",
+        guestsLabel: "Меҳмонлар сони",
+        sendBtn: "Жавобни юбориш",
+        copied: "Нусхаланди!",
+        calSaved: "Тақвим файли юкланди!",
+        rsvpSent: "Жавобингиз қабул қилинди!"
+      },
+      ru: {
+        heroSub: "Приглашение на свадьбу",
+        heroPlace: "Суббота • Свадебное торжество",
+        scrollText: "Листайте вниз",
+        letterCap: "Дорогой гость",
+        letterP1: "Для нас большая радость и честь видеть вас рядом в самый счастливый и особенный день нашей жизни.",
+        letterP2: "От всего сердца приглашаем вас разделить с нами начало нашей новой семейной жизни.",
+        loveLine: "Ваше присутствие украсит наш праздник!",
+        familiesLine: "С искренним уважением от наших семей",
+        cdCap: "До торжественного дня",
+        cdTitle: "12 Декабря 2026",
+        days: "Дней",
+        hours: "Часов",
+        mins: "Минут",
+        secs: "Секунд",
+        calBtn: "Добавить в календарь",
+        copyLink: "Скопировать ссылку приглашения",
+        planCap: "Программа вечера",
+        planTitle: "Расписание",
+        tl1Title: "Встреча гостей",
+        tl1Desc: "Приятная музыка, тёплый приём и фотосессия",
+        tl2Title: "Начало торжества",
+        tl2Desc: "Выход молодожёнов и тёплые поздравления",
+        tl3Title: "Праздничный ужин и танцы",
+        tl3Desc: "Угощения, музыка и весёлые моменты",
+        venueCap: "Место проведения",
+        venueTitle: "Банкетный зал",
+        venueName: "Дворец торжеств",
+        venueType: "Главный банкетный зал",
+        venueAddr: "ул. Праздничная, 12",
+        venueNote: "Откройте карту, чтобы проложить удобный маршрут",
+        mapBtn: "Открыть на карте",
+        dressCap: "Стиль и цвета",
+        dressNote: "Будем рады видеть вас в элегантных нарядах в гармонии с атмосферой вечера.",
+        photoCap: "На память",
+        photoTitle: "Хештег",
+        photoDesc: "Делитесь фото и видео с торжества под хештегом:",
+        copyShort: "Копировать",
+        rsvpCap: "Подтверждение участия",
+        nameLabel: "Ваше имя и фамилия",
+        attendLabel: "Сможете прийти?",
+        yesBtn: "С радостью буду",
+        noBtn: "К сожалению, не смогу",
+        guestsLabel: "Количество гостей",
+        sendBtn: "Отправить ответ",
+        copied: "Скопировано!",
+        calSaved: "Файл календаря сохранён!",
+        rsvpSent: "Ваш ответ принят!"
+      },
+      tj: {
+        heroSub: "Даъватнома ба тӯйи арӯсӣ",
+        heroPlace: "Шанбе • Базми тӯй",
+        scrollText: "Ба поён фароед",
+        letterCap: "Меҳмони гиромӣ",
+        letterP1: "Дидани шумо дар паҳлӯямон дар рӯзи пурфайзу хотирмони ҳаётамон барои мо хушбахтии бузург аст.",
+        letterP2: "Шуморо аз таҳти дил ба оғози зиндагии нави оилавиамон даъват менамоем.",
+        loveLine: "Ҳузури шумо ба базми мо шукӯҳ мебахшад!",
+        familiesLine: "Бо эҳтироми самимӣ аз номи оилаҳоямон",
+        cdCap: "То рӯзи висол",
+        cdTitle: "12 Декабри 2026",
+        days: "Рӯз",
+        hours: "Соат",
+        mins: "Дақиқа",
+        secs: "Сония",
+        calBtn: "Ба тақвим илова кардан",
+        copyLink: "Нусхабардории пайванди даъватнома",
+        planCap: "Барномаи тантана",
+        planTitle: "Тартиби рӯз",
+        tl1Title: "Пешвози меҳмонон",
+        tl1Desc: "Мусиқии форам, чеҳраи хандон ва аксбардорӣ",
+        tl2Title: "Оғози маросим",
+        tl2Desc: "Баромади арӯсу домод ва табрикоти самимӣ",
+        tl3Title: "Зиёфат ва рақс",
+        tl3Desc: "Таомҳои лазиз, суруд ва лаҳзаҳои шодмонӣ",
+        venueCap: "Суроғаи тӯйхона",
+        venueTitle: "Тӯйхона",
+        venueName: "Қасри тантана",
+        venueType: "Толори асосии базм",
+        venueAddr: "кӯчаи Ҷашн, 12",
+        venueNote: "Харитаро кушода, роҳи қулайро интихоб намоед",
+        mapBtn: "Дар харита кушодан",
+        dressCap: "Услуб ва рангҳо",
+        dressNote: "Хушҳол мешавем, ки бо либосҳои зебо ва мувофиқ ба фазои базм ташриф оред.",
+        photoCap: "Барои хотира",
+        photoTitle: "Ҳаштег",
+        photoDesc: "Акс ва наворҳои худро бо ин ҳаштег мубодила кунед:",
+        copyShort: "Нусха",
+        rsvpCap: "Тасдиқи иштирок",
+        nameLabel: "Ному насаби шумо",
+        attendLabel: "Ташриф меоред?",
+        yesBtn: "Албатта меоям",
+        noBtn: "Мутаассифона, намеоям",
+        guestsLabel: "Шумораи меҳмонон",
+        sendBtn: "Фиристодани ҷавоб",
+        copied: "Нусхабардорӣ шуд!",
+        calSaved: "Файли тақвим боргирӣ шуд!",
+        rsvpSent: "Ҷавоби шумо қабул шуд!"
+      }
+    };
+
+    let currentLang = "uz";
+    const toastEl = document.getElementById("toast");
+
+    function showToast(msg) {
+      toastEl.textContent = msg;
+      toastEl.classList.add("show");
+      clearTimeout(window.toastTimer);
+      window.toastTimer = setTimeout(() => toastEl.classList.remove("show"), 2400);
+    }
+
+    function applyLang(lang) {
+      currentLang = lang;
+      const dict = translations[lang] || translations.uz;
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll(".lang-btn").forEach((btn) => {
+        btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+      });
+    }
+
+    document.querySelectorAll(".lang-btn").forEach((btn) => {
+      btn.addEventListener("click", () => applyLang(btn.getAttribute("data-lang")));
+    });
+
+    const targetDate = new Date("2026-12-12T17:00:00").getTime();
+    function updateCountdown() {
+      const now = Date.now();
+      const diff = Math.max(0, targetDate - now);
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("cdDays").textContent = String(days).padStart(2, "0");
+      document.getElementById("cdHours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("cdMins").textContent = String(mins).padStart(2, "0");
+      document.getElementById("cdSecs").textContent = String(secs).padStart(2, "0");
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    document.getElementById("addCalBtn").addEventListener("click", () => {
+      const ics = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "BEGIN:VEVENT",
+        "DTSTART:20261212T170000",
+        "DTEND:20261212T230000",
+        "SUMMARY:Doniyor & Risolat Wedding",
+        "DESCRIPTION:Wedding celebration of Doniyor & Risolat",
+        "END:VEVENT",
+        "END:VCALENDAR"
+      ].join("\r\n");
+      const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "doniyor-risolat-2026.ics";
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast(translations[currentLang].calSaved);
+    });
+
+    async function copyText(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast(translations[currentLang].copied);
+      } catch (e) {
+        const inp = document.createElement("input");
+        inp.value = text;
+        document.body.appendChild(inp);
+        inp.select();
+        document.execCommand("copy");
+        document.body.removeChild(inp);
+        showToast(translations[currentLang].copied);
+      }
+    }
+
+    document.getElementById("copyPageBtn").addEventListener("click", () => {
+      copyText(window.location.href);
+    });
+
+    document.getElementById("copyHashBtn").addEventListener("click", () => {
+      copyText("#DoniyorRisolat2026");
+    });
+
+    let guestCount = 2;
+    const guestCountEl = document.getElementById("guestCount");
+    document.getElementById("minusBtn").addEventListener("click", () => {
+      if (guestCount > 1) {
+        guestCount -= 1;
+        guestCountEl.textContent = guestCount;
+      }
+    });
+    document.getElementById("plusBtn").addEventListener("click", () => {
+      if (guestCount < 20) {
+        guestCount += 1;
+        guestCountEl.textContent = guestCount;
+      }
+    });
+
+    const attendYes = document.getElementById("attendYes");
+    const attendNo = document.getElementById("attendNo");
+    attendYes.addEventListener("click", () => {
+      attendYes.classList.add("active");
+      attendNo.classList.remove("active");
+    });
+    attendNo.addEventListener("click", () => {
+      attendNo.classList.add("active");
+      attendYes.classList.remove("active");
+    });
+
+    document.getElementById("rsvpForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      showToast(translations[currentLang].rsvpSent);
+      e.target.reset();
+      guestCount = 2;
+      guestCountEl.textContent = guestCount;
+    });
+
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    function spawnSparkles(count = 24) {
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 2.2 + 0.8,
+          vx: (Math.random() - 0.5) * 0.6,
+          vy: (Math.random() - 0.5) * 0.6 - 0.2,
+          alpha: 1
+        });
+      }
+    }
+    spawnSparkles(28);
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach((p, idx) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.alpha -= 0.004;
+        if (p.alpha <= 0) {
+          particles[idx] = {
+            x: Math.random() * canvas.width,
+            y: canvas.height + 10,
+            r: Math.random() * 2 + 0.8,
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: -(Math.random() * 0.7 + 0.2),
+            alpha: 0.8
+          };
+          return;
+        }
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(245, 223, 158, ${p.alpha})`;
+        ctx.fill();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    document.getElementById("sparkleBtn").addEventListener("click", () => {
+      spawnSparkles(35);
+      showToast("✦");
+    });
+
+    let audioCtx = null;
+    let musicPlaying = false;
+    let musicInterval = null;
+    const notes = [261.63, 329.63, 392.0, 523.25, 392.0, 329.63];
+    let noteIdx = 0;
+
+    document.getElementById("musicBtn").addEventListener("click", () => {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === "suspended") {
+        audioCtx.resume();
+      }
+      if (!musicPlaying) {
+        musicPlaying = true;
+        musicInterval = setInterval(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = "sine";
+          osc.frequency.value = notes[noteIdx % notes.length];
+          noteIdx += 1;
+          gain.gain.setValueAtTime(0.03, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.7);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.72);
+        }, 750);
+        showToast("♪");
+      } else {
+        musicPlaying = false;
+        clearInterval(musicInterval);
+      }
+    });
+  </script>
+</body>
+</html>
